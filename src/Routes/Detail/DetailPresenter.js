@@ -57,6 +57,15 @@ const ItemContainer = styled.div`
 
 const Item = styled.span``;
 
+const IMDB = styled.a`
+  background-color: #f5c518;
+  font-family: Verdana, Arial, sans-serif;
+  font-weight: 600;
+  color: black;
+  padding: 5px;
+  border-radius: 5px;
+`;
+
 const Divider = styled.span`
   margin: 0 10px;
 `;
@@ -124,6 +133,15 @@ const DetailPresenter = ({ result, error, loading }) =>
                       ? genre.name
                       : `${genre.name} / `
                   )}
+              </Item>
+              <Divider>•</Divider>
+              <Item>
+                <IMDB
+                  href={`https://www.imdb.com/title/${result.imdb_id}`}
+                  target="_blank"
+                >
+                  IMDb
+                </IMDB>
               </Item>
             </ItemContainer>
             <Overview>{result.overview}</Overview>
