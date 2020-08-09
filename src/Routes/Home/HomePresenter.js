@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import Helmet from "react-helmet";
 import Section from "../../Components/Section";
 import Loader from "../../Components/Loader";
 import Message from "../../Components/Message";
@@ -15,6 +16,9 @@ const HomePresenter = ({ nowPlaying, upcoming, popular, error, loading }) =>
     <Loader />
   ) : (
     <Container>
+      <Helmet>
+        <title>Movies | popcorn time</title>
+      </Helmet>
       {nowPlaying && nowPlaying.length > 0 && (
         <Section title="Now Playing">
           {nowPlaying.map((movie) => (
