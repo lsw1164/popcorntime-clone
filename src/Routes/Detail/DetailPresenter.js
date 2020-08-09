@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import Loader from "Components/Loader";
 import Helmet from "react-helmet";
+import DetailTab from "./DetailTab";
 
 const Container = styled.div`
   height: calc(100vh - 50px);
@@ -145,6 +146,7 @@ const DetailPresenter = ({ result, error, loading }) =>
               </Item>
             </ItemContainer>
             <Overview>{result.overview}</Overview>
+            <DetailTab result={result} />
           </Data>
         </Content>
       </Container>
