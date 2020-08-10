@@ -49,9 +49,17 @@ const VideoContainer = styled.div`
 
 const VideoItem = styled.iframe`
   padding: 20px;
-  width: 500px;
-  height: 250px;
+  width: 400px;
+  height: 300px;
 `;
+
+const ProductionContainer = styled.div``;
+
+const ProductionCompany = styled.div``;
+
+const ProductionCountries = styled.div``;
+
+const SeasonContainer = styled.div``;
 
 const useTab = () => {
   const [tab, setTab] = useState("video");
@@ -61,10 +69,9 @@ const useTab = () => {
 function DetailTab({
   result: { videos, production_companies, production_countries, seasons },
 }) {
-  console.log("videos : ", videos);
-  console.log(production_companies);
-  console.log(production_countries);
-  console.log(seasons);
+  console.log("production_companies : ", production_companies);
+  console.log("production_countries : ", production_countries);
+  console.log("seasons : ", seasons);
   const [tab, setTab] = useTab();
   return (
     <Container>
@@ -90,11 +97,21 @@ function DetailTab({
           <VideoContainer>
             {videos.results.map((video) => (
               <VideoItem
+                key={video.key}
                 title={video.name}
                 src={`${YOUTUBE_BASE}/${video.key}`}
               ></VideoItem>
             ))}
           </VideoContainer>
+        )}
+        {tab === PRODUCTION && Array.isArray(production_companies) && (
+          <ProductionCompany>ProductionCompany</ProductionCompany>
+        )}
+        {tab === PRODUCTION && Array.isArray(production_countries) && (
+          <ProductionCountries>ProductionCountries</ProductionCountries>
+        )}
+        {tab === SEASON && Array.isArray(seasons) && (
+          <SeasonContainer>SeasonContainer</SeasonContainer>
         )}
       </Content>
     </Container>
