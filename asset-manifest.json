@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.js": "/popcorntime-clone/static/js/main.c0816a11.chunk.js",
+    "main.js.map": "/popcorntime-clone/static/js/main.c0816a11.chunk.js.map",
+    "runtime-main.js": "/popcorntime-clone/static/js/runtime-main.843101cb.js",
+    "runtime-main.js.map": "/popcorntime-clone/static/js/runtime-main.843101cb.js.map",
+    "static/js/2.139ca613.chunk.js": "/popcorntime-clone/static/js/2.139ca613.chunk.js",
+    "static/js/2.139ca613.chunk.js.map": "/popcorntime-clone/static/js/2.139ca613.chunk.js.map",
+    "index.html": "/popcorntime-clone/index.html",
+    "precache-manifest.d62a9eb8cff85158c0cc43dc8d01b523.js": "/popcorntime-clone/precache-manifest.d62a9eb8cff85158c0cc43dc8d01b523.js",
+    "service-worker.js": "/popcorntime-clone/service-worker.js",
+    "static/js/2.139ca613.chunk.js.LICENSE.txt": "/popcorntime-clone/static/js/2.139ca613.chunk.js.LICENSE.txt",
+    "static/media/noPosterSmall.png": "/popcorntime-clone/static/media/noPosterSmall.87a0eb6a.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.843101cb.js",
+    "static/js/2.139ca613.chunk.js",
+    "static/js/main.c0816a11.chunk.js"
+  ]
+}
